@@ -8,11 +8,12 @@
       </div>
   </div>
   <div class="row">
-      <div class="col-md-6">
+    <div class="col-md-6">
     <div *ngFor='let quote of quotes; let i=index'>
 
         <div>
-          <h4 id={{i}}>{{quote.name}} </h4>
+          <h4  class= "align" id={{i}}>{{quote.name}} </h4>
+          <hr>
           <button (click)='toggleDetails(i)' class="btn btn-primary">Show quote</button>
         </div>
 

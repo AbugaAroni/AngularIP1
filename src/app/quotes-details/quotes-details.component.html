@@ -1,7 +1,8 @@
-<p>{{quotes.description}}</p>
-<p>Added {{quotes.completeDate|dateCount}} days ago</p>
-<p>Upvotes - {{quotes.upvote}}</p>
-<p>Downvotes - {{quotes.downvote}}</p>
+<p> <span class="different">Quote</span> -{{quotes.description}}</p>
+<p> <span class="different">Added:</span> -{{quotes.completeDate|dateCount}} days ago</p>
+<p> <span class="different">Upvotes</span> -{{quotes.upvote}}</p>
+<p> <span class="different">Downvotes</span> -{{quotes.downvote}}</p>
+<button class="btn btn-info">View more details</button>
 <p> add button to view author and stuff </p>
 
 <button (click)= 'quotesDelete(true)' class="btn btn-danger">Delete</button>
