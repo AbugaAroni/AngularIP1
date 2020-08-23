@@ -4,7 +4,7 @@ export class Quotes {
   downvote: number;
 
   constructor(public id: number,public name: string,public description: string, public author: string,
-    public submitter: string){
+    public submitter: string, public completeDate: Date){
     this.showDescription=false;
     this.upvote=0;
     this.downvote=0;

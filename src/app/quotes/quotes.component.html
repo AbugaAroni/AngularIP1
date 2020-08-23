@@ -1,9 +1,8 @@
 <div>
   <h1>My Quotes</h1>
-  <button (click)='togglePopular(i)'>Show most popular quote</button>
   <ul>
       <div *ngFor='let quote of quotes; let i=index'>
-      <li>{{quote.name}}</li>
+      <li>{{quote.name}} due on {{quote.completeDate}}</li>
         <button (click)='toggleDetails(i)'>Show quote</button>
         <app-quotes-details *ngIf='quote.showDescription' [quotes]='quote' (isDelete) = 'deleteQuote($event,i)'></app-quotes-details>
       </div>
