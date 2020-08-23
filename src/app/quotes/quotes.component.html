@@ -2,9 +2,9 @@
   <h1>My Quotes</h1>
   <ul>
       <div *ngFor='let quote of quotes; let i=index'>
-      <li>{{quote.name}} </li>
-        <button (click)='toggleDetails(i)'>Toggle Details</button>
-        <app-quotes-details *ngIf='quote.showDescription' [quotes]='quote'></app-quotes-details>
+      <li>{{quote.name}}</li>
+        <button (click)='toggleDetails(i)'>Show quote</button>
+        <app-quotes-details *ngIf='quote.showDescription' [quotes]='quote' (isDelete) = 'deleteQuote($event,i)'></app-quotes-details>
       </div>
   </ul>
 </div>
