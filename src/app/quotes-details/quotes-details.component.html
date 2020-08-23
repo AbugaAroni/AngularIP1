@@ -1,8 +1,43 @@
-<p> <span class="different">Quote</span> -{{quotes.description}}</p>
-<p> <span class="different">Added:</span> -{{quotes.completeDate|dateCount}} days ago</p>
-<p> <span class="different">Upvotes</span> -{{quotes.upvote}}</p>
-<p> <span class="different">Downvotes</span> -{{quotes.downvote}}</p>
-<button class="btn btn-info">View more details</button>
-<p> add button to view author and stuff </p>
+<div class="row">
+  <div class="col-md">
+    <p> <span class="different">Author:</span> - {{quotes.author}}</p>
+  </div>
+</div>
 
-<button (click)= 'quotesDelete(true)' class="btn btn-danger">Delete</button>
+<div class="row">
+  <div class="col-md">
+    <p> <span class="different">Upvotes</span> - {{quotes.upvote}}</p>
+  </div>
+
+<div class="col-md">
+  <button class="btn btn-info">Upvote ^</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md">
+    <p> <span class="different">Downvotes</span> -{{quotes.downvote}}</p>
+  </div>
+
+  <div class="col-md">
+    <button class="btn btn-warning">Downvote v</button>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col-md">
+      <p> <span class="different">Submitted by</span> - {{quotes.submitter}}</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md">
+      <p> <span class="different">Added:</span> - {{quotes.completeDate|dateCount}} days ago</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md">
+      <button (click)= 'quotesDelete(true)' class="btn btn-danger">Delete?</button>
+    </div>
+  </div>
