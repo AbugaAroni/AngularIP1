@@ -1,5 +1,6 @@
 <div>
   <h1>My Quotes</h1>
+  <button (click)='togglePopular(i)'>Show most popular quote</button>
   <ul>
       <div *ngFor='let quote of quotes; let i=index'>
       <li>{{quote.name}}</li>
