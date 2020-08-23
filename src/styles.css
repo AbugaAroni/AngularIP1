@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+div {
+  width: 300px;
+  margin: auto;
+  padding-top: 10px;
+}
+
+h1 {
+margin: 1em 0 0.5em 0;
+color: #343434;
+font-weight: normal;
+font-family: 'Ultra', sans-serif;
+font-size: 36px;
+line-height: 42px;
+text-transform: uppercase;
+text-shadow: 0 2px white, 0 3px #777;
+text-align: center;
+}
+
+.pic1 {
+  object-fit:fill;
+}
+
+img {
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
