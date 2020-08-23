@@ -1,10 +1,20 @@
-<div>
-  <h1>My Quotes</h1>
-  <ul>
-      <div *ngFor='let quote of quotes; let i=index'>
-      <li>{{quote.name}} due on {{quote.completeDate|date}}</li>
-        <button (click)='toggleDetails(i)'>Show quote</button>
-        <app-quotes-details *ngIf='quote.showDescription' [quotes]='quote' (isDelete) = 'deleteQuote($event,i)'></app-quotes-details>
+
+<div class="container">
+  <h1>Quotes for all occasions</h1>
+  <br>
+
+  <div class="row">
+    <div class="col-md-6">
+        <div *ngFor='let quote of quotes; let i=index'>
+        <div>
+          <h4 id={{i}}>{{quote.name}} due on {{quote.completeDate|date}}</h4>
+          <button (click)='toggleDetails(i)' class=" btn-primary">Show quote</button>
+        </div>
+
+        <div *ngIf='quote.showDescription'>
+        <app-quotes-details [quotes]='quote' (isDelete) = 'deleteQuote($event,i)'></app-quotes-details>
+        </div>
       </div>
-  </ul>
+    </div>
+  </div>
 </div>
