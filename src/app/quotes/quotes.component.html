@@ -2,7 +2,7 @@
   <h1>My Quotes</h1>
   <ul>
       <div *ngFor='let quote of quotes; let i=index'>
-      <li>{{quote.name}} due on {{quote.completeDate}}</li>
+      <li>{{quote.name}} due on {{quote.completeDate|date}}</li>
         <button (click)='toggleDetails(i)'>Show quote</button>
         <app-quotes-details *ngIf='quote.showDescription' [quotes]='quote' (isDelete) = 'deleteQuote($event,i)'></app-quotes-details>
       </div>
