@@ -11,10 +11,7 @@ export class QuotesComponent implements OnInit {
   quotes:Quotes[] = [
      new Quotes(1, 'Motivation', 'Dont drink milk after 5', 'Shen Tzu','Abuga', new Date(2017,0,17)),
      new Quotes(2, 'Power', 'Buy Cookies  for every not just yourself', 'Shen Tzu', 'Abuga', new Date(2018,3,18)),
-     new Quotes(3, 'Wisdom', 'Get lit only on weekends', 'Abuga','Abuga', new Date(2020,7,20)),
-     new Quotes(4, 'Strength', 'The way forward is always the way', 'John', 'Abuga', new Date(2020,5,5)),
-     new Quotes(5, 'Humility', 'Though life is tough, it can always be tougher', 'Liz Tzu', 'Abuga', new Date(2020,4,4)),
-     new Quotes(6, 'Wealth', 'No smoke, no fires', 'Liam Tzu', 'Abuga', new Date(2020,7,24)),
+     new Quotes(3, 'Wisdom', 'have fun only on weekends', 'Abuga','Abuga', new Date(2020,7,20)),
    ];
 
    addNewQuote(Quote){
@@ -33,6 +30,13 @@ export class QuotesComponent implements OnInit {
       this.quotes.splice(index,1);
     }
   }
+
+  upvoteQuote(isUpvote, index){
+    if (isUpvote) {
+      this.quotes[index].upvote ++;
+    }
+  }
+
 
   constructor() { }
 
