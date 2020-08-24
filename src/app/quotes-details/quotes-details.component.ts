@@ -11,6 +11,7 @@ export class QuotesDetailsComponent implements OnInit {
   @Input() quotes: Quotes;
   @Output() isDelete = new EventEmitter<boolean>();
   @Output() isUpvote = new EventEmitter<number>();
+  @Output() isDownvote = new EventEmitter<number>();
 
   quotesDelete(deletes:boolean){
     this.isDelete.emit(deletes);
@@ -18,6 +19,10 @@ export class QuotesDetailsComponent implements OnInit {
 
   upvote(adds: number){
     this.isUpvote.emit(adds);
+  }
+
+  downvote(minus: number){
+    this.isDownvote.emit(minus);
   }
 
   constructor() { }

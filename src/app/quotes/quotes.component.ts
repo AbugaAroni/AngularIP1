@@ -37,6 +37,12 @@ export class QuotesComponent implements OnInit {
     }
   }
 
+  downvoteQuote(isDownvote, index){
+    if (isDownvote) {
+      this.quotes[index].downvote ++;
+    }
+  }
+
 
   constructor() { }
 
