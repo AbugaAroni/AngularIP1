@@ -17,6 +17,7 @@ Angular CLI
 
 ### Limitations
 The most upvoted quote does not get highlighted as specified in the project objectives.
+The submitted quote has two way binding through the form. It is still editable once you've put in and submitted the data.
 
 ### Setup Instructions
 If you wish to view the project, you can view the published site in the html link below. If you wish to view the code, you may download the files and open them in a text editor of your choosing. If you wish to view the working website on your computer, you will need run the application through an angular compiler.
