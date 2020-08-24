@@ -15,7 +15,7 @@ You can delete a quote.
 ### Technologies Used
 Angular CLI
 
-### Limitations
+### Limitations / bugs
 The most upvoted quote does not get highlighted as specified in the project objectives.
 The submitted quote has two way binding through the form. It is still editable once you've put in and submitted the data.
 
