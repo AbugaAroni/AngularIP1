@@ -17,6 +17,13 @@ export class QuotesComponent implements OnInit {
      new Quotes(6, 'Wealth', 'No smoke, no fires', 'Liam Tzu', 'Abuga', new Date(2020,7,24)),
    ];
 
+   addNewQuote(Quote){
+    let QuoteLength = this.quotes.length;
+    Quote.id = QuoteLength+1;
+    Quote.completeDate = new Date();
+    this.quotes.push(Quote)
+  }
+
    toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }

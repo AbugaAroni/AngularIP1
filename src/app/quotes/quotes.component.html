@@ -9,7 +9,7 @@
 
         <div>
           <h4  class= "align" id={{i}}>{{quote.name}} </h4>
-          <p> <span class="different">Quote</span> -{{quote.description}}</p>
+          <p> <span class="different">Quote</span> - {{quote.description}}</p>
           <hr>
           <button (click)='toggleDetails(i)' class="btn btn-primary">Show quote details</button>
         </div>
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="col-md-6">
-      <app-quotes-form></app-quotes-form>
+      <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
     </div>
   </div>
 </div>
