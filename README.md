@@ -11,12 +11,12 @@ You can choose to view more information on a quote.
 You can vote on a quote.
 You can add a quote.
 You can delete a quote.
+A quote will be highlighted once upvotes become greater than 10.
 
 ### Technologies Used
 Angular CLI
 
 ### Limitations / bugs
-The most upvoted quote does not get highlighted as specified in the project objectives.
 The submitted quote has two way binding through the form. It is still editable once you've put in and submitted the data.
 
 ### Setup Instructions

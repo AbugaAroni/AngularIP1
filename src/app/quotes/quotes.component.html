@@ -9,7 +9,8 @@
 
         <div>
           <h4  class= "align" id={{i}}>{{quote.name}} </h4>
-          <p> <span class="different">Quote</span> - {{quote.description}}</p>
+          <p appHighlight *ngIf="quote.upvote>=10; else ">> <span class="different">Quote</span> - {{quote.description}}</p>
+          <p *ngIf="quote.upvote<10; else ">> <span class="different">Quote</span> - {{quote.description}}</p>
           <hr>
           <button (click)='toggleDetails(i)' class="btn btn-primary">Show quote details</button>
         </div>
