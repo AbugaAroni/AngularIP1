@@ -32,7 +32,12 @@
 
   <div class="row">
     <div class="col-md">
-      <p> <span class="different">Added:</span> - {{quotes.completeDate|dateCount}} days ago</p>
+      <div *ngIf="(quotes.completeDate|dateCount) >= 1 ; else">
+        <p> <span class="different">Added:</span> - {{quotes.completeDate|dateCount}} days ago</p>
+      </div>
+      <div *ngIf="(quotes.completeDate|dateCount) < 1 ; else" >
+        <p> <span class="different">Added:</span> - 0 days ago</p>
+      </div>
     </div>
   </div>
 
